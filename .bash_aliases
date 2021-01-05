@@ -23,9 +23,10 @@ alias ll='ls -lF'
 alias ..='cd ..'
 alias o='less -R'
 
+alias gs='git status'
 alias gl='git log --oneline --graph --decorate --color'
 alias gf='git fetch --all'
-alias gs='git status'
+alias gp='git pull'
 
 alias kn='u8s kubectl get namespace'
 alias kd='u8s kubectl get deployments'
