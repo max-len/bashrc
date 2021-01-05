@@ -117,10 +117,13 @@ if ! shopt -oq posix; then
 fi
 
 # custom
+
+# for WSL2
 sudo hwclock -s
 sudo mount -a
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 export LIBGL_ALWAYS_INDIRECT=1
+# end WSL2
 
 prompt_prefix() { [ -n "$CCLOUD_PROMPT_ESCAPED_BASH" ] && echo -n "$CCLOUD_PROMPT_ESCAPED_BASH "; }; PS1="\$(prompt_prefix)$PS1"
 
