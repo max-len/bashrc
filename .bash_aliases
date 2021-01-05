@@ -1,19 +1,19 @@
 function proxy-enable {
-  export HTTP_PROXY=socks5://$(ip route show default | cut -d' ' -f 3):1080
+    export HTTP_PROXY=socks5://$(ip route show default | cut -d' ' -f 3):1080
     export HTTPS_PROXY=socks5://$(ip route show default | cut -d' ' -f 3):1080
-      export NO_PROXY=localhost,127.0.0.1,gateway.docker.internal
+    export NO_PROXY=localhost,127.0.0.1,gateway.docker.internal
 }
 
 function proxy-disable {
-  export HTTP_PROXY=
+    export HTTP_PROXY=
     export HTTPS_PROXY=
 }
 
 function c {
-	    exec {fd_ccloud}>>/dev/stdout
-	        . <(ccloud-multitool --ppid $$ --stdout-fd $fd_ccloud "$@")
-		    exec {fd_ccloud}>&-
-	    }
+    exec {fd_ccloud}>>/dev/stdout
+    . <(ccloud-multitool --ppid $$ --stdout-fd $fd_ccloud "$@")
+    exec {fd_ccloud}>&-
+    }
 source <(cld completion bash --prog-name cld)
 
 alias f='(sudo dockerd &) ; sleep 1; sudo f5fpc-docker'
