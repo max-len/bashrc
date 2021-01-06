@@ -28,8 +28,9 @@ alias gl='git log --oneline --graph --decorate --color'
 alias gf='git fetch --all'
 alias gp='git pull'
 
+alias k='u8s kubectl --'
 alias kn='u8s kubectl get namespace'
 alias kd='u8s kubectl get deployments'
-alias kp='u8s kubectl get pods'
+alias kp='u8s kubectl get -o wide pods'
 alias kl='u8s kubectl logs'
 
