@@ -14,7 +14,7 @@ function c {
     . <(ccloud-multitool --ppid $$ --stdout-fd $fd_ccloud "$@")
     exec {fd_ccloud}>&-
     }
-source <(cld completion bash --prog-name cld)
+source <(c completion bash --prog-name c)
 
 alias f='(sudo dockerd &) ; sleep 1; sudo f5fpc-docker'
 alias j='ssh -D :1080 jump01.cc.eu-de-1.cloud.sap'
