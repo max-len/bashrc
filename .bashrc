@@ -119,6 +119,7 @@ fi
 # custom
 
 # for WSL2
+if [ ! -d /sys/fs/cgroup/systemd ]; then sudo mkdir -p /sys/fs/cgroup/systemd; fi
 sudo mount -a
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 export LIBGL_ALWAYS_INDIRECT=1
