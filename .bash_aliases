@@ -17,7 +17,7 @@ function c {
 source <(c completion bash --prog-name c)
 
 alias f='(sudo dockerd &) ; sleep 1; sudo f5fpc-docker'
-alias j='ssh -D :1080 jump01.cc.eu-de-1.cloud.sap'
+alias j='ssh jump01.cc.eu-de-1.cloud.sap'
 
 alias ll='ls -lF'
 alias ..='cd ..'

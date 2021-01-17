@@ -2,3 +2,5 @@
 !.basrhc
 !.bash_aliases
 !.gitignore
+!.ssh/
+!.ssh/config
