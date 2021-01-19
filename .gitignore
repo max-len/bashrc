@@ -1,5 +1,6 @@
 *
-!.basrhc
+!.bashrc
+!.bashrc.jumphost
 !.bash_aliases
 !.gitignore
 !.ssh/
