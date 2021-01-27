@@ -114,8 +114,9 @@ fi
 
 # autologout lol no
 # needs python installed, runs with user privileges
-# pip3 install fortune cowpy lolcat
-# git clone https://github.com/bmc/fortunes.git # or any other fortune collection
+# run "pip3 install fortune cowpy lolcat"
+# run "git clone https://github.com/bmc/fortunes.git" 
+# or any other fortune collection
 PATH=$PATH:~/.local/bin
 while :; do clear; fortune ~/fortunes/fortunes | cowpy -e borg | lolcat -a -d 20 -s 30; sleep 60; done
 
