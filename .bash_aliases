@@ -25,6 +25,7 @@ alias o='less -R'
 
 alias gs='git status'
 alias gl='git log --oneline --graph --decorate --color'
+alias gsw='git switch'
 alias gf='git fetch --all'
 alias gd='git diff'
 alias gc='git commit'
