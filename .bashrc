@@ -127,7 +127,9 @@ export LIBGL_ALWAYS_INDIRECT=1
 # end WSL2
 
 prompt_prefix() {
+	# k8s env prefix with space
 	[ -n "$CCLOUD_PROMPT_ESCAPED_BASH" ] && echo -n "$CCLOUD_PROMPT_ESCAPED_BASH "
+	# git prefix: red if unstaged changes in cwd, green otherwise
 	if [ -d .git ]; then if git diff --exit-code > /dev/null; then
 		echo -en "\033[01;32m$(git branch --show-current)\033[00m"; else
 	        echo -en "\033[01;31m$(git branch --show-current)\033[00m"; fi
