@@ -131,8 +131,8 @@ prompt_prefix() {
 	[ -n "$CCLOUD_PROMPT_ESCAPED_BASH" ] && echo -n "$CCLOUD_PROMPT_ESCAPED_BASH "
 	# git prefix: red if unstaged changes in cwd, green otherwise
 	if git rev-parse --is-inside-work-tree 2>&1 > /dev/null; then if git diff --exit-code > /dev/null; then
-		echo -en "\033[01;32m$(git branch --show-current)\033[00m"; else
-	        echo -en "\033[01;31m$(git branch --show-current)\033[00m"; fi
+		echo -en "\001\033[01;32m\002$(git branch --show-current)\001\033[00m\002"; else
+	        echo -en "\001\033[01;31m\002$(git branch --show-current)\001\033[00m\002"; fi
 	fi
 	}; PS1="\$(prompt_prefix)$PS1"
 
