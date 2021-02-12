@@ -118,5 +118,5 @@ fi
 # run "git clone https://github.com/bmc/fortunes.git" 
 # or any other fortune collection
 PATH=$PATH:~/.local/bin
-while :; do clear; fortune ~/fortunes/fortunes | cowpy -e borg | lolcat -a -d 20 -s 30; sleep 60; done
+while :; do clear; fortune ~/fortunes/fortunes | cowpy -e borg | lolcat -a -d 20 -s 30; sleep 180; done
 
