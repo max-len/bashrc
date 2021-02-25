@@ -1,6 +1,6 @@
 function proxy-enable {
-    export HTTP_PROXY=socks5://$(ip route show default | cut -d' ' -f 3):1080
-    export HTTPS_PROXY=socks5://$(ip route show default | cut -d' ' -f 3):1080
+    export HTTP_PROXY=socks5://localhost:1080
+    export HTTPS_PROXY=socks5://localhost:1080
     export NO_PROXY=localhost,127.0.0.1,gateway.docker.internal
 }
 
